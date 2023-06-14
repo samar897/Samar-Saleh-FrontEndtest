@@ -24,6 +24,7 @@ import {
   import React from "react";
   import Cardyoutupe from "./Cardyoutupe";
 import { Link } from "react-router-dom";
+import Linkedin from "./Linkedin";
 
   
   export default function HomePage(){
@@ -97,6 +98,9 @@ import { Link } from "react-router-dom";
         <img src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"/>
        
         </Flex>
+
+
+
         <Flex
           direction="column"
           as="nav"
@@ -107,6 +111,8 @@ import { Link } from "react-router-dom";
           <NavItem icon={MdHome}> <Link to="/HomePage">Home Page</Link></NavItem>
           <NavItem icon={MdHome}> <Link to="https://www.linkedin.com/in/samar-saleh/">Linkedin</Link></NavItem>
           <NavItem icon={HiCollection}><Link to="/Logout">Logout</Link></NavItem>
+
+
    
         </Flex>
       </Box>
@@ -163,6 +169,7 @@ import { Link } from "react-router-dom";
           </Flex>
   
           <Box as="main" p="4">
+          <Linkedin></Linkedin>
 
 <Cardyoutupe ></Cardyoutupe>
 

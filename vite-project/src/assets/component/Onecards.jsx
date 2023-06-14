@@ -16,6 +16,7 @@ import {
     useDisclosure,Card, CardBody, CardFooter, CardHeader,Textarea  , Heading ,Grid, Button, Image 
   } from "@chakra-ui/react";
   import axios from 'axios';
+  import { Link } from "react-router-dom";
 
 
 
@@ -36,11 +37,11 @@ import {
     setID(props.id);
     useEffect(() => {
       axios.get(url).then(res=>{
-       setData(res.data);
-       setname(res.data[id].name)
-       console.log(res.data[id].img);
-       setVideu(res.data[id].img)
-       setDis(res.data[id].Dis)
+      setData(res.data);
+       setname(res.data[0].name)
+       console.log(res.data[0].img);
+       setVideu(res.data[0].img)
+       setDis(res.data[0].Dis)
        
 
       })
@@ -55,7 +56,7 @@ import {
     const [Dis, setDis] = useState("")
     const [comment, setComment] = useState('');
     const [likes, setLikes] = useState(0);
-  
+    const [dislikes, setDislikes] = useState(0);
     
     console.log(search);
 
@@ -83,7 +84,7 @@ import {
     }, [url])
     
     const handleDislikeClick = (commentId) => {
-        axios.put('/api/comments/' + commentId, {
+        axios.put('https://64874e11beba629727906d25.mockapi.io/api/Login' + commentId, {
           dislikes: dislikes + 1,
         });
     
@@ -260,10 +261,7 @@ import {
           <Flex justifyContent="center" mt="90px" gap="40px" id="flexCard" >
               <Grid templateColumns='repeat(3, 1fr)' gap={6} id="mygrid">
                   {
-                     /* data.filter((item) => {
-                          return search.toLowerCase() === '' ? item :
-                              item.name.toLowerCase().includes(search)
-                      })*/
+                   
                      
                           <div >
                           <center>

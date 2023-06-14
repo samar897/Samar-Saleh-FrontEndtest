@@ -64,7 +64,7 @@ const navigat = useNavigate()
       navigat("/HomePage")
         }
       else{
-      alert("password is not correct")
+      //alert("password is not correct")
       }
     })
     }

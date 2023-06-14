@@ -10,7 +10,7 @@ import Nav from './Nav';
 import Footer from './Footer';*/
 import LoginPage from "./assets/component/LoginPage"
 import HomePage from "./assets/component/Homepage"
-import Cardyoutupe from "./assets/component/Cardyoutupe"
+
 
 
 import Onecards from "./assets/component/Onecards"
@@ -26,6 +26,7 @@ function App() {
 <Route path="/Logout" element={<LoginPage />} />
 <Route path="/HomePage" element={<HomePage/>} />
 <Route path="/Onecards" element={<Onecards/>} />
+<Route path="/" element={<LoginPage/>} />
 
 
 </Routes>
