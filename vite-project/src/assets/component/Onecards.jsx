@@ -27,6 +27,7 @@ import {
   import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
   import React,{useEffect,useState} from "react";
   import Cardyoutupe from "./Cardyoutupe";
+  import LoginPage from "./LoginPage";
 
   
   export default function Onecard(props){
@@ -79,13 +80,12 @@ import {
           dislikes: dislikes + 1,
         });
     
-        setDislikes(dislikes + 1);
-        setLikes(likes - 1);
+        setDislikes(dislikes - 1);
+       
       };
     
     
       const handleLikeClick = () => {
-       
         setLikes(likes + 1);
       };
     

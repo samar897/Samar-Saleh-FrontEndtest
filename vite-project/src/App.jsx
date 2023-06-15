@@ -11,7 +11,7 @@ import Footer from './Footer';*/
 import LoginPage from "./assets/component/LoginPage"
 import HomePage from "./assets/component/Homepage"
 
-import LoginPage from "./assets/component/LoginPage"
+
 
 import Onecards from "./assets/component/Onecards"
 
