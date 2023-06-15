@@ -111,6 +111,7 @@ import Linkedin from "./Linkedin";
           <NavItem icon={MdHome}> <Link to="/HomePage">Home Page</Link></NavItem>
           <NavItem icon={MdHome}> <Link to="https://www.linkedin.com/in/samar-saleh/">Linkedin</Link></NavItem>
           <NavItem icon={HiCollection}><Link to="/Logout">Logout</Link></NavItem>
+          <NavItem ><Link to="/LoginPage">Login Page</Link></NavItem>
 
 
    

@@ -11,7 +11,7 @@ import Footer from './Footer';*/
 import LoginPage from "./assets/component/LoginPage"
 import HomePage from "./assets/component/Homepage"
 
-
+import LoginPage from "./assets/component/LoginPage"
 
 import Onecards from "./assets/component/Onecards"
 
@@ -27,6 +27,8 @@ function App() {
 <Route path="/HomePage" element={<HomePage/>} />
 <Route path="/Onecards" element={<Onecards/>} />
 <Route path="/" element={<LoginPage/>} />
+<Route path="/LoginPage" element={<LoginPage/>} />
+
 
 
 </Routes>

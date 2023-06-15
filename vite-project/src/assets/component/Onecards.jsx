@@ -34,16 +34,15 @@ import {
     const [id, setID] = useState("");
     
     const url = `https://64874e11beba629727906d25.mockapi.io/api/image`
-    setID(props.id);
+   
     useEffect(() => {
-      axios.get(url).then(res=>{
-      setData(res.data);
+       axios.get(url).then(res=>{
        setname(res.data[0].name)
        console.log(res.data[0].img);
        setVideu(res.data[0].img)
        setDis(res.data[0].Dis)
+       console.log(res.data);
        
-
       })
     }, [url])
 
@@ -74,14 +73,6 @@ import {
       };
 
 
-     React. useEffect(() => {
-      axios.get(url).then(res=>{
-      setData(res.data);
-      console.log(res.data);
-    
-      })
-  
-    }, [url])
     
     const handleDislikeClick = (commentId) => {
         axios.put('https://64874e11beba629727906d25.mockapi.io/api/Login' + commentId, {
@@ -194,6 +185,7 @@ import {
         <NavItem icon={MdHome}> <Link to="https://www.linkedin.com/in/samar-saleh/">Linkedin</Link></NavItem>
         <NavItem icon={HiCollection}><Link to="/Logout">Logout</Link></NavItem>
         <NavItem><Cardyoutupe w={"10px"} h={"1px"}></Cardyoutupe></NavItem>
+        <NavItem ><Link to="/LoginPage">Login Page</Link></NavItem>
          
    
         </Flex>
@@ -287,13 +279,9 @@ import {
                           borderRadius='lg'
                           id="theImg"
                       /></button>
-                      {showMore ? Dis : `${Dis.substring(0, 15)}`}
+                          {showMore ? Dis : `${Dis.substring(0, 15)}`}
                           {showMore ? "Show less" : "Show more"}
-                            {/*<Text>
-                              With Chakra UI, I wanted to sync the speed of development with the speed
-                              of design. I wanted the developer to be just as excited as the designer to
-                              create a screen.
-                      </Text>*/}
+
                      
                           </CardBody>
                          
@@ -318,6 +306,7 @@ import {
                         <Button onClick={handleLikeClick}>Like</Button>
                         <Button onClick={handleDislikeClick}>Dislike</Button>
                         <h4>Likes: {likes}</h4>
+                        <h4>dislikes: {dislikes}</h4>
                       </Box>
                           </CardFooter>
                         </Card>
